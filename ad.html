@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Vungle Creative</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Vungle">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container" class="container cta-icon theme-green">
+        <div class="ad-unit">
+            <div id="background" class="background">
+                <video id="video-elem" width="320" height="240" autoplay muted loop preload webkit-playsinline playsinline>
+
+                    <source src="1537879163258.mp4" type="video/mp4">
+                </video>
+                <img id="volume-icon" style="position: absolute;left:calc(1vw + 1vh);top:calc(1vw + 1vh);max-width:2.5em;max-height:2.5em;" >
+
+                
+                <div id="shadow-box"></div>
+                <img class="circle-mask animation transition portrait" src="inward-curve-portrait.svg" />
+                <img class="circle-mask animation transition landscape" src="inward-curve-landscape.svg" />
+            </div>
+            <div class="app-info animation transition">
+                <img id="app-icon" class="icon animation transition" src="1537879175322.jpg" onclick="callSDK('download')" />
+                <div class="app-info-text animation transition">
+                    <div id="ad-title" class="title">name</div>
+                </div>
+                <div id="cta" class="cta animation transition">
+                    <img id="icon" src="download.svg" />
+                    <span id="cta-text">Download</span>
+                    <img id="cta-custom" class="cta custom-cta transition" href="javascript:void(0)" src="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="settings.js"></script>
+<script src="config.js"></script>
+<script src="vungle.js"></script>
+<script src="jquery.js"></script>
+<script src="main.js"></script>
+<script src="app-info.js"></script>
+<script src="video.js"></script>
+
+</html>

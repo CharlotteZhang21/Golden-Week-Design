@@ -61,8 +61,8 @@
 }
 
 .theme-seasonal .cta.animation.play {
-  -webkit-animation: flyin 1s ease-in-out 10 forwards, pulse 2s ease-in-out infinite 1s;
-  animation: flyin 1s ease-in-out 10 forwards, pulse 2s ease-in-out infinite 1s; }
+  -webkit-animation: seasonal-flyin 1s ease-in-out 1 forwards, pulse 2s ease-in-out infinite 1s;
+  animation: seasonal-flyin 1s ease-in-out 1 forwards, pulse 2s ease-in-out infinite 1s; }
 
 
 
@@ -176,8 +176,8 @@
   z-index: 4;
 }
 #l_6 {
-  width: 100%;
-  left: -10%;
+  width: 80%;
+  left: 0%;
   bottom: 0;
   z-index: 5;
 }
@@ -237,38 +237,135 @@
   right: 20%;
 }
 
+#tinyLeavesDiv {
+  width: 80%;
+  left: 0;
+  bottom: 0;
+  height: 10%;
+}
+
 @media all and (orientation: landscape) {
   #message {
-    width: 40%;
+    width: 50%;
+    left: -20%;
   }
+
   #flagDiv {
-    width: 20%;
-    height: 30%;
-    top: 6%;
-    right: 14%;
+    width: 18%;
+    height: 26%;
+    top: 9%;
+    right: 10%;
     transform: rotate(-90deg);
+  }
+
+  #flagPreshow {
+    right: 10%;
+    left: auto;
+    top: 30%;
+    width: 20%;
   }
 
   .theme-seasonal .cta {
     width: 32%;
-    height: 10%;
-    left: 77%;
+    height: 14%;
+    left: 81%;
+    /*left: 0;
+    right: 0;*/
+    top: 90% !important; 
+    /*bottom: -15%;*/
   }
+
+  #c_4 {
+    left: -1%;
+    bottom: 34%;
+  }
+
   #charactersDiv {
-    width: 40%;
-    transform: scaleX(-1);
-  }
-  #seasonalDiv{
-    width: 50%;
+    width: 45%;
     left: auto;
-    right: 0;
+    right: 4%;
     transform: scaleX(-1);
   }
 
-  #flagPreshow {
-    right: 78%;
+  #seasonalDiv{
+    width: 45%;
     left: auto;
-    top: 0;
-    width: 20%;
+    right: -1.5%;
+    transform: scaleX(-1);
   }
+
+}
+
+@media screen and (device-aspect-ratio: 3/4) and (orientation: portrait) {
+  #message {
+    width: 70%;
+    top: 15%;
+  }
+
+  #charactersDiv {
+    width: 67%;
+    left: -7%;
+    bottom: -7%;
+  }
+
+  #seasonalDiv {
+    width: 68%;
+    left: 4%;   
+    bottom: -10%;
+  }
+
+  .theme-seasonal .cta > span {
+
+    font-size: 1.8em;    
+  }
+}
+@media (orientation: landscape), (min-aspect-ratio: 1/1) {
+  .theme-seasonal .cta {
+    width: 30%;
+    height: 10%;
+    top: 94% !important;
+  }
+  .theme-seasonal .cta > span {
+
+    font-size: 1.8em;    
+  }
+
+  #charactersDiv {
+    width: 50%;
+    right: 4%;
+    bottom: -9%;
+  }
+  #seasonalDiv {
+    width: 50%;
+    bottom: -10%;
+  }
+}
+
+/*iPhone X landscape*/
+@media (min-aspect-ratio: 724/354) and (orientation: landscape) {
+  .theme-seasonal .cta > span {
+
+    font-size: 1.2em;    
+  }
+
+  #flagDiv {
+    width: 14%;
+    height: 23%;
+  }
+  #flagPreShow {
+    right: 15%;   
+  }
+}
+
+
+@keyframes seasonal-flyin {
+  0% {
+    top: 100%;
+    -webkit-transform: scale(0) translate(-50%, -50%);
+    transform: scale(0) translate(-50%, -50%); }
+  100% {
+    /*top: 90%;*/
+    -webkit-transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1; } 
 }

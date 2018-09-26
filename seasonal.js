@@ -76,14 +76,13 @@ function animateCharacters(_delay) {
 			after: $(this).position().left + i * 20
 		}
 
-		tween = TweenMax.from($(this), 1 + 0.4 * i, {
+		tween = TweenMax.from($(this), 1.5 + 0.2 * i, {
 			// rotation: _deg.before,
 			bottom: _b.before,
 			// left: _l.before,
 			delay: _delay,
 			// ease: Back.easeOut,
-			ease: Power4.easeOut,
-			// ease: CustomEase.create("custom", "M0,0 C0.128,0.572 0.257,0.976 0.512,1.05 0.672,1.096 0.838,1 1,1"),
+			ease: Expo.easeInOut,
 			transformOrigin:"center center"			
 		});
 
@@ -95,7 +94,7 @@ function animateStars(_delay) {
 	var flagDivTween = TweenMax.from($('#flagDiv'), 0.5, {
 		top: $('#flagPreshow').position().top,
 		left: $('#flagPreshow').position().left,
-		ease: Expo.easeIn,
+		ease: Expo.easeInOut,
 		delay: _delay,
 		onComplete: function() {
 			$('#flagDiv').children().each(function(i, el){
@@ -142,3 +141,9 @@ function animateMessage( _delay) {
 		delay: _delay
 	});
 }
+
+window.addEventListener('resize', function() {
+
+    $('#flagDiv').removeAttr('style');
+})
+

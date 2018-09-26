@@ -26,11 +26,11 @@ function getBrowserLanguage() {
     var lang;
     if (navigator.userLanguage) {
         lang = navigator.userLanguage;
-        if(lang.indexOf('zh-TW') == -1)
+        if(lang.indexOf('zh') == -1)
             lang = lang.split("-")[0];
     } else if (navigator.language) {
         lang = navigator.language;
-        if(lang.indexOf('zh-TW') == -1)
+        if(lang.indexOf('zh') == -1)
             lang = lang.split("-")[0];
     } else {
         lang = "en";

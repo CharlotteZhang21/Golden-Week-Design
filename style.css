@@ -423,6 +423,17 @@ body {
 .bg-drag-transition {
   transition: height .2s ease-in-out; }
 
+
+.cls-portrait, .cls-landscape {
+  fill: #fff;
+}
+
+.invisible {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .app-info-drag-transition {
   transition: top .2s ease-in-out !important; }
 
@@ -832,7 +843,7 @@ body {
 
 .cta.animation.play {
   -webkit-animation: flyin 1s ease-in-out 1 forwards, pulse 2s ease-in-out infinite 1s;
-  animation: flyin 1s ease-in-out 1 forwards, pulse 2s ease-in-out infinite 1s; }
+  animation: flyin 1s ease-in-out 1 forwards, pulse 2s ease-in-out infinite 1s; } 
 
 .cta img {
   position: absolute;

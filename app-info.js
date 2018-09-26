@@ -4,19 +4,43 @@ resizeText($('#cta-text')[0])
 var ctaAnimationOverride;
 window.onload = function() {
     $('.animation').addClass('play');
+
+    if (getBrowserLanguage() == 'zh'){
+        startTemplate();
+    }
 };
 
 var ctaAnimationFinished = false;
 setTimeout(function() {
 
     $('#cta').click(function(e) {
-        console.log(e);
+        // console.log(e);
         $('.app-info-text,.cta').css({ 'opacity': '1' });
         ctaClick(e);
         callSDK('download');
     });
 
 }, 1000);
+
+function getBrowserLanguage() {
+    var lang;
+    if (navigator.userLanguage) {
+        lang = navigator.userLanguage;
+        if(lang.indexOf('zh-TW') == -1)
+            lang = lang.split("-")[0];
+    } else if (navigator.language) {
+        lang = navigator.language;
+        if(lang.indexOf('zh-TW') == -1)
+            lang = lang.split("-")[0];
+    } else {
+        lang = "en";
+    }
+
+    console.log(lang)
+    return lang;
+
+}
+
 
 
 resetAppInfo(2000)
@@ -64,7 +88,7 @@ function resizeText(elem) {
     elem.style.fontSize = null;
     var unitType = ((window.innerHeight > window.innerWidth) ? 'vw' : 'vh');
     var newsize = adjustFontSize(elem) + unitType;
-    console.log(newsize);
+    // console.log(newsize);
     elem.style.fontSize = newsize;
 }
 
@@ -72,7 +96,7 @@ function adjustFontSize(elem) {
     var newfontSize;
     var minimumSize = .7;
     $(elem).addClass('stopWrapping')
-    console.log(elem);
+    // console.log(elem);
     var parent = elem.parentElement;
     var currentWidth = elem.offsetWidth;
     var currentFontSize = parseFloat(getStyle(elem, 'fontSize'));
@@ -82,7 +106,7 @@ function adjustFontSize(elem) {
     } else {
         currentFontSize = currentFontSize / document.body.offsetHeight * 100;
     }
-    console.log(currentFontSize);
+    // console.log(currentFontSize);
 
 
     var rect = elem.getBoundingClientRect();
@@ -92,12 +116,12 @@ function adjustFontSize(elem) {
 
     if (currentWidth > parent.offsetWidth * .95 || currentWidth + divOffset > parent.offsetWidth * .95) {
         var percentage;
-        console.log('bigger');
+        // console.log('bigger');
         if (currentWidth > parent.offsetWidth * .95) {
             percentage = parent.offsetWidth / currentWidth;
         } else {
             percentage = parent.offsetWidth / (currentWidth + divOffset);
-            console.log(percentage)
+            // console.log(percentage)
         }
 
         if (currentFontSize * percentage > currentFontSize * minimumSize) {
@@ -105,7 +129,7 @@ function adjustFontSize(elem) {
         } else {
             $(elem).addClass('truncate')
         }
-        console.log(newfontSize);
+        // console.log(newfontSize);
     }
     $(elem).removeClass('stopWrapping')
     return newfontSize;

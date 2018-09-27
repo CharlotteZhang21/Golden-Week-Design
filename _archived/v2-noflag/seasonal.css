@@ -1,0 +1,374 @@
+.layout-item {
+  position: absolute;
+  margin: auto;
+}
+
+.theme-seasonal {
+  background: #ca2e2e;
+}
+
+#preAnimate {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  /*z-index: 99;*/
+  background: #ca2e2e;
+}
+
+#fullScreenClick {
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 95%;
+  top: 5%;
+  z-index: 999;
+}
+
+.theme-seasonal .app-info .icon{ 
+  top: 55%;
+  z-index: 10;
+}
+
+.theme-seasonal .app-info .app-info-text {
+  left: 80%;
+  display: none;
+}
+
+.theme-seasonal .app-info .title {
+  color: #fff;
+  display: none;
+}
+.theme-seasonal .cta {
+  width: 60%;
+  height: 8%;
+  left: 50%;
+  top: 95% !important;
+  border-radius: 0;
+  z-index: 999;
+  background: url('cta.png') no-repeat;
+  background-size: contain;
+  background-position: center center; 
+} 
+
+.theme-seasonal .cta > span {
+  font-size: 1.5em;
+  color: #b54343;
+}
+
+.theme-seasonal .cta.animation.play {
+  -webkit-animation: seasonal-flyin 1s ease-in-out 1 forwards, pulse 2s ease-in-out infinite 1s;
+  animation: seasonal-flyin 1s ease-in-out 1 forwards, pulse 2s ease-in-out infinite 1s; }
+
+
+
+.theme-seasonal .cls-portrait, .theme-seasonal .cls-landscape {
+  fill: #ca2e2e;
+}
+
+.theme-seasonal .circle-mask.animation.play {
+  -webkit-animation: push .9s ease-in-out 1 1.8s forwards;
+  animation: push .9s ease-in-out 1 1.8s forwards; 
+}
+#message {
+  width: 80%;
+  height: 20%;
+  left: 0;
+  right: 0;
+  top: 20%; 
+}
+
+#message img{
+  width: 100%;
+  /*height: 100%;*/
+}
+
+#charactersDiv {
+  width: 80%;
+  height: 50%;
+  left: 0;
+  right:0;
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+}
+
+#charactersDiv img{
+  position: absolute;
+}
+
+#c_1 {
+  width: 30%;
+  right: 10%;
+  bottom: -3%;
+  z-index: 2;
+  transform: scaleX(-1);
+}
+#c_2 {
+  width: 50%;
+  left: 3%;
+  bottom: -3%;
+  z-index: 2;
+}
+#c_3 {
+  width: 70%;
+  right: -20%;
+  bottom: 0;
+  z-index: 2;
+  transform: scaleX(-1);
+}
+#c_4 {
+  width: 60%;
+  left: -6%;
+  bottom: 18%;
+  z-index: 0;
+}
+
+
+#seasonalDiv {
+  width: 80%;
+  /*height: 50%;*/
+  left: 0;
+  /*right:0;*/
+  position: absolute;
+  margin: auto;
+  bottom: -20;
+}
+
+#seasonalDiv img{
+  position: absolute;
+  height: auto;
+}
+
+
+#l_1 {
+  width: 80%;
+  left: 2%;
+  bottom: -19%;
+  z-index: 0;
+}
+#l_2 {
+  width: 64%;
+  left: 20%;
+  bottom: -20%;
+  z-index: 4;
+}
+#l_3 {
+  width: 68%;
+  left: -10%;
+  bottom: 0;
+  z-index: 4;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+#l_4 {
+  width: 90%;
+  left: -21%;
+  bottom: 0;
+  z-index: 3;
+}
+#l_5 {
+  width: 100%;
+  left: 4%;
+  bottom: 0;
+  z-index: 4;
+}
+#l_6 {
+  width: 80%;
+  left: 0%;
+  bottom: 0;
+  z-index: 5;
+}
+#l_7 {
+  width: 60%;
+  left: 68%;
+  bottom: 0;
+  transform: scaleX(-1);
+  z-index: 5;
+}
+
+#flagPreshow {
+  width: 50%;
+  height: auto;
+  top: 45%;
+  right: 0;
+  left: 0;
+  
+}
+
+#flagDiv {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  right: 5%;
+  top: 60%;
+  margin: auto;
+}
+
+
+#tinyLeavesDiv {
+  width: 80%;
+  left: 0;
+  bottom: 0;
+  height: 10%;
+}
+
+@media all and (orientation: landscape) {
+  #preAnimate {
+    top: auto;
+    left: 100%;
+  }
+  .theme-seasonal .app-info .icon{ 
+    top: 5%;
+    width: 18vh;
+    height: 18vh;
+  }
+  #message {
+    width: 50%;
+    left: -20%;
+  }
+
+  #flagDiv {
+    width: 30%;
+    height: auto;
+    /*height: 26%;*/
+    top: 9%;
+    right: 10%;
+    /*transform: rotate(-90deg);*/
+  }
+
+  #flagPreshow {
+    right: 10%;
+    left: auto;
+    top: 30%;
+    width: 20%;
+  }
+
+  .theme-seasonal .cta {
+    width: 32%;
+    height: 14%;
+    left: 81%;
+    /*left: 0;
+    right: 0;*/
+    top: 90% !important; 
+    /*bottom: -15%;*/
+  }
+  #c_1 {
+    right: 30%;
+    transform: scaleX(1);
+  }
+  #c_2 {
+    left: -7%;
+  }
+  #c_3 {
+    right: 20%;
+    transform: scaleX(1);
+  }
+  #c_4 {
+    left: -1%;
+    bottom: 50%;
+  }
+
+  #charactersDiv {
+    width: 45%;
+    left: auto;
+    right: 4%;
+    transform: scaleX(-1);
+  }
+
+  #seasonalDiv{
+    width: 45%;
+    left: auto;
+    right: -1.5%;
+    transform: scaleX(-1);
+  }
+
+}
+
+@media screen and (device-aspect-ratio: 3/4) and (orientation: portrait) {
+  #message {
+    width: 70%;
+    top: 15%;
+  }
+
+  #charactersDiv {
+    width: 67%;
+    left: 0;
+    right: 0;
+    bottom: -5%;
+  }
+
+  #seasonalDiv {
+    width: 68%;
+    left: 0;
+    right: 0;
+    bottom: -10%;
+  }
+
+  #l_4 {
+    left: -25%;
+  }
+
+  .theme-seasonal .cta > span {
+
+    font-size: 1.8em;    
+  }
+}
+@media screen and (device-aspect-ratio: 4/3) and (orientation: landscape){
+  .theme-seasonal .cta {
+    width: 30%;
+    height: 10%;
+    top: 94% !important;
+  }
+  .theme-seasonal .cta > span {
+
+    font-size: 1.8em;    
+  }
+
+  #charactersDiv {
+    width: 50%;
+    right: ;
+    bottom: 0%;
+  }
+
+  #c_4 {
+    bottom: 40%;
+  }
+  #seasonalDiv {
+    width: 50%;
+    bottom: -5%;
+  }
+
+  #l_7 {
+    left: 49%;
+  }
+}
+
+/*iPhone X landscape*/
+@media (min-aspect-ratio: 724/354) and (orientation: landscape) {
+  .theme-seasonal .cta > span {
+
+    font-size: 1.2em;    
+  }
+
+  #flagDiv {
+    width: 14%;
+    height: 23%;
+  }
+  #flagPreShow {
+    right: 15%;   
+  }
+}
+
+
+@keyframes seasonal-flyin {
+  0% {
+    top: 100%;
+    -webkit-transform: scale(0) translate(-50%, -50%);
+    transform: scale(0) translate(-50%, -50%); }
+  100% {
+    /*top: 90%;*/
+    -webkit-transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1; } 
+}

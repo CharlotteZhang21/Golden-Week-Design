@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <title>Vungle Creative</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Vungle">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container" class="container cta-text theme-green">
+        <div class="ad-unit">
+            <div class="layout-item" id="fullScreenClick"></div>
+            <div id="background" class="background">
+                <video id="video-elem" width="320" height="240" autoplay muted loop preload webkit-playsinline playsinline>
+
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+                <img id="volume-icon" style="position: absolute;left:calc(1vw + 1vh);top:calc(1vw + 1vh);max-width:2.5em;max-height:2.5em;" >                
+                <div id="shadow-box"></div>
+                
+
+                <svg class="circle-mask animation transition portrait" viewBox="0 0 374.12 251.986">
+                  <g id="Group_2" data-name="Group 2" transform="translate(722.12 -844.723) rotate(90)">
+                    <g id="Group_1" data-name="Group 1" transform="translate(844.723 348)">
+                      <path id="Path_1" data-name="Path 1" class="cls-landscape" d="M447.1,0c16.832,37.581,28.109,107.253,28.109,187.06S463.932,336.539,447.1,374.12H699.086V0Z" transform="translate(-447.1)"/>
+                    </g>
+                  </g>
+                </svg>
+
+                <!-- inward-curve-landscape.svg -->
+                <svg class="circle-mask animation transition landscape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 251.986 374.12">
+                 <path id="Path_1" data-name="Path 1" class="cls-portrait" d="M447.1,0c16.832,37.581,28.109,107.253,28.109,187.06S463.932,336.539,447.1,374.12H699.086V0Z" transform="translate(-447.1)"/>
+                </svg>
+
+            </div>
+            <div class="app-info animation transition">
+                <div id="preAnimate" class="invisible"></div>
+                <img id="app-icon" class="icon animation transition" src="icon.jpg" onclick="callSDK('download')" />
+                <div class="app-info-text animation transition">
+                    <div id="ad-title" class="title">name</div>
+                </div>
+                <div id="cta" class="cta animation transition">
+                    <img id="icon" src="download.svg" />
+                    <span id="cta-text">Download</span>
+                    <img id="cta-custom" class="cta custom-cta transition" href="javascript:void(0)" src="" />
+                </div>
+                
+
+                <div id="seasonalContainer" class="invisible">
+                    <div class="layout-item" id="message">
+                        <img src="text.png">
+                    </div>
+                    <!-- <div class="layout-item" id="flagPreshow"></div> -->
+                    <!-- <div > -->
+                       <!-- <img id="flagDiv" src="gift.png"> -->
+                    <!-- </div> -->
+                    <div id="charactersDiv">                        
+                        <img id="c_4" src="ch4.png">
+                        <img id="c_3" src="ch3.png">
+                        <img id="c_2" src="ch2.png">
+                        <img id="c_1" src="ch1.png">
+                    </div>
+                    <div class="layout-item" id='tinyLeavesDiv'></div>
+                    <div id="seasonalDiv">
+                        <img id="l_1" src="l3.png">
+                        <img id="l_2" src="l4.png">
+                        <img id="l_3" src="l1.png">
+                        <img id="l_4" src="l3.png">
+                        <img id="l_5" src="l2.png">
+                        <img id="l_6" src="l2.png">
+                        <img id="l_7" src="l3.png">
+                    </div>    
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="settings.js"></script>
+<script src="config.js"></script>
+<script src="vungle.js"></script>
+<script src="jquery.js"></script>
+<script src="TweenMax.min.js"></script>
+<script src="main.js"></script>
+<script src="app-info.js"></script>
+<script src="video.js"></script>
+<script src="seasonal.js"></script>
+
+</html>

@@ -15,6 +15,8 @@ function getDeviceLang() {
         lang = "en";
     }
 
+    console.log(lang);
+
     return lang;
 }
 

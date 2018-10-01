@@ -27,6 +27,7 @@
 
 .theme-seasonal .app-info .icon{ 
   top: 55%;
+  border: 4px solid #ffd60c;
   z-index: 10;
 }
 
@@ -268,7 +269,9 @@
     left: -1%;
     bottom: 50%;
   }
-
+  #l_7 {
+    left: 35%;
+  }
   #charactersDiv {
     width: 45%;
     left: auto;
